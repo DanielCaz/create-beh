@@ -1,3 +1,5 @@
+#! /usr/bin/env bun
+
 const copyTemplate = async (projectName: string) => {
   const process = Bun.spawnSync([
     "git",

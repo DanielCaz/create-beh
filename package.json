@@ -3,12 +3,8 @@
   "description": "Simple CLI tool to create a new project with the BEH stack.",
   "module": "src/index.ts",
   "type": "module",
-  "version": "1.0.1",
-  "scripts": {
-    "dev": "bun run src/index.ts",
-    "build": "bun build --target=bun ./src/index.ts --outfile=dist/index.js",
-    "start": "bun run build/index.js"
-  },
+  "version": "1.0.0",
+  "bin": "src/index.ts",
   "devDependencies": {
     "bun-types": "latest"
   },
