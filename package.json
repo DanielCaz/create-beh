@@ -1,0 +1,16 @@
+{
+  "name": "create-beh",
+  "module": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run src/index.ts",
+    "build": "bun build --target=bun ./src/index.tsx --outfile=build/index.js",
+    "start": "bun run build/index.js"
+  },
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
