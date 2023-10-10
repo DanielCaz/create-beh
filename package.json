@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "bun run src/index.ts",
-    "build": "bun build --target=bun ./src/index.tsx --outfile=build/index.js",
+    "build": "bun build --target=bun ./src/index.ts --outfile=dist/index.js",
     "start": "bun run build/index.js"
   },
   "devDependencies": {
