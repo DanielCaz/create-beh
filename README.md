@@ -1,4 +1,8 @@
-# create-htmx-bun
+# Create BEH
+
+Simple CLI tool to create a new project with the BEH stack.
+
+## Getting Started
 
 To install dependencies:
 
@@ -9,7 +13,5 @@ bun install
 To run:
 
 ```bash
-bun run index.ts
+bun dev
 ```
-
-This project was created using `bun init` in bun v1.0.4. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
