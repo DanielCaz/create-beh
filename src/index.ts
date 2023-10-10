@@ -24,6 +24,9 @@ const copyTemplate = async (projectName: string) => {
     packageJsonContent.replace("beh-template", projectName)
   );
 
+  Bun.spawnSync(["rm", "-rf", ".git"], { cwd: projectName });
+  Bun.spawnSync(["git", "init"], { cwd: projectName });
+
   console.log("Done");
 };
 
