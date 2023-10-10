@@ -1,7 +1,9 @@
 {
   "name": "create-beh",
+  "description": "Simple CLI tool to create a new project with the BEH stack.",
   "module": "src/index.ts",
   "type": "module",
+  "version": "1.0.1",
   "scripts": {
     "dev": "bun run src/index.ts",
     "build": "bun build --target=bun ./src/index.ts --outfile=dist/index.js",
@@ -12,5 +14,22 @@
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
-  }
+  },
+  "license": "MIT",
+  "author": "DanielCaz",
+  "bugs": {
+    "url": "https://github.com/DanielCaz/create-beh/issues"
+  },
+  "homepage": "https://github.com/DanielCaz/create-beh#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielCaz/create-beh.git"
+  },
+  "keywords": [
+    "cli",
+    "beh",
+    "bun",
+    "elysia",
+    "htmx"
+  ]
 }
