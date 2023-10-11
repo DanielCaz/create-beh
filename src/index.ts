@@ -28,6 +28,7 @@ const copyTemplate = async (projectName: string) => {
 
   Bun.spawnSync(["rm", "-rf", ".git"], { cwd: projectName });
   Bun.spawnSync(["git", "init"], { cwd: projectName });
+  Bun.spawnSync(["bun", "i"], { cwd: projectName });
 
   console.log("Done");
 };
