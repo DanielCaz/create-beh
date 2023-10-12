@@ -3,7 +3,7 @@
   "description": "Simple CLI tool to create a new project with the BEH stack.",
   "module": "src/index.ts",
   "type": "module",
-  "version": "1.0.20",
+  "version": "1.0.3",
   "bin": "src/index.ts",
   "devDependencies": {
     "bun-types": "latest"
