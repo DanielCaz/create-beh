@@ -1,15 +1,17 @@
 #! /usr/bin/env bun
 
-const copyTemplate = async (projectName: string) => {
+const copyTemplate = async (projectName: string, useTW: boolean) => {
   const process = Bun.spawnSync([
     "git",
     "clone",
-    "https://github.com/DanielCaz/beh-template",
+    "-b",
+    useTW ? "with-tailwindcss" : "main",
+    `https://github.com/DanielCaz/beh-template`,
     projectName,
   ]);
 
   if (!process.success) {
-    console.log("Error: ", process.stdout);
+    console.log("Error: ", process.stderr.toLocaleString());
     return;
   }
 
@@ -34,12 +36,20 @@ const copyTemplate = async (projectName: string) => {
 };
 
 console.log("Welcome to create BEH");
-console.write("Project name: ");
+console.write("Project name (beh-app): ");
 
 let projectName = "beh-app";
 for await (const line of console) {
-  projectName = line;
+  if (line) projectName = line;
   break;
 }
 
-copyTemplate(projectName);
+console.write("Use TailwindCSS (y/N): ");
+
+let useTW = false;
+for await (const line of console) {
+  useTW = line === "Y" || line === "y";
+  break;
+}
+
+copyTemplate(projectName, useTW);
